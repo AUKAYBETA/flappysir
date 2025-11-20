@@ -1,0 +1,114 @@
+body, html {
+  margin: 0;
+  overflow: hidden;
+  background: black;
+  font-family: Arial, sans-serif;
+}
+
+#gameCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#uiOverlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+#bestScoreUI {
+  color: white;
+  margin-top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px black;
+}
+
+#gameOverMenu {
+  display: none;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: auto;
+  color: white;
+}
+
+#gameOverMenu h1 {
+  font-size: 52px;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 6px black;
+}
+
+#gameOverMenu h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+#gameOverMenu button {
+  display: block;
+  width: 70%;
+  margin: 12px auto;
+  padding: 14px;
+  font-size: 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#restartBtn { background: #00c853; color: white; }
+#shareImageBtn { background: #2979ff; color: white; }
+#shareLinkBtn { background: #ff1744; color: white; }
+
+#shareNote {
+  margin-top: 15px;
+  font-size: 18px;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+@media (max-width: 600px) {
+  #gameOverMenu h1 { font-size: 40px; }
+  #gameOverMenu h2 { font-size: 26px; }
+  #bestScoreUI { font-size: 22px; }
+}
+#saveStoryBtn, #openStoryBtn {
+  background: #e1306c;
+  color: white;
+  font-weight: bold;
+  width: 70%;
+  margin: 12px auto;
+  padding: 14px;
+  font-size: 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  display: block;
+}
+#toast {
+  position: fixed;
+  top: -60px;         /* hidden initially */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #21c55d;   /* modern green */
+  color: white;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: all 0.4s ease;
+  z-index: 99999;
+  opacity: 0;
+}
+
+#toast.show {
+  top: 20px;      /* slide down */
+  opacity: 1;
+}
